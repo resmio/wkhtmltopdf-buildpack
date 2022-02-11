@@ -23,7 +23,7 @@ else
 fi
 
 WKHTMLTOPDF_URL="https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.${UBUNTU_VERSION}_amd64.deb"
-WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf.deb"
+WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf_0.12.6-1.deb"
 WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltopdf"
 WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/local/bin"
 WKHTMLTOPDF_LIBS="$WKHTMLTOPDF_PATH/usr/local/lib"
