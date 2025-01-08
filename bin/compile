@@ -18,12 +18,15 @@ elif [ "$STACK" == "heroku-16" ]; then
   UBUNTU_VERSION="xenial"
 elif [ "$STACK" == "heroku-18" ]; then
   UBUNTU_VERSION="bionic"
+elif [ "$STACK" == "heroku-24" ]; then
+  UBUNTU_VERSION="bookworm" # debian
+
 else
   UBUNTU_VERSION="focal"
 fi
 
-WKHTMLTOPDF_URL="https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.${UBUNTU_VERSION}_amd64.deb"
-WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf_0.12.6-1.deb"
+WKHTMLTOPDF_URL="https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox_0.12.6.1-3.${UBUNTU_VERSION}_amd64.deb"
+WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltox_0.12.6.1-3.bookworm_amd64.deb"
 WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltopdf"
 WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/local/bin"
 WKHTMLTOPDF_LIBS="$WKHTMLTOPDF_PATH/usr/local/lib"
@@ -54,4 +57,3 @@ rm -rf "$BIN_PATH/wkhtmltoimage"
 
 echo "-----> Cleaning up"
 rm -rf $WKHTMLTOPDF_PATH
-
